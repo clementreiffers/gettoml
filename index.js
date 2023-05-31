@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#! /usr/bin/env node
 import * as toml from 'toml';
 import {readFile} from 'fs';
 import {hideBin} from 'yargs/helpers';
