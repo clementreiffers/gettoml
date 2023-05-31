@@ -6,7 +6,7 @@
   },
   "name": "gettoml",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -15,5 +15,8 @@
   },
   "scripts": {
     "code-style": "eslint ."
+  },
+  "bin": {
+    "gettoml": "./index.js"
   }
 }
