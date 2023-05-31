@@ -6,7 +6,21 @@
   },
   "name": "gettoml",
   "type": "module",
-  "version": "1.0.2",
+  "keywords": [
+    "toml",
+    "reader",
+    "CLI",
+    "JavaScript",
+    "eslint",
+    "xo",
+    "fs",
+    "wrangler",
+    "cargo",
+    "cloudflare",
+    "workers",
+    "workerd"
+  ],
+  "version": "1.0.3",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
