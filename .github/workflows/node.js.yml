@@ -5,7 +5,9 @@ name: Node.js CI test and code-style
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
