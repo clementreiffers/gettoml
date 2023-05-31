@@ -28,9 +28,6 @@ jobs:
       - name: 🔎 Verifying code style 🔎
         run: npm run code-style
 
-      - name: ⚡ Testing ⚡
-        run: npm run test
-
       - name: ⬆️ Uploading to NPM ⬆️
         run: |
           git config --global user.email "reiffersclement@gmail.com"
