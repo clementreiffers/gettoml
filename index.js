@@ -1,3 +1,4 @@
+#!/usr/bin/node
 import * as toml from 'toml';
 import {readFile} from 'fs';
 import {hideBin} from 'yargs/helpers';
