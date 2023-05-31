@@ -4,35 +4,36 @@ this project serve to read toml files efficiently and use the result directly in
 
 ## Overview
 
-## Install it
-
-run `npm i`
+1. [Run it](#run-it)
+    1. [By installing it](#by-installing-it)
+    2. [Using npx](#using-npx)
+2. [Examples](#examples)
 
 ## Run it
 
-run `npm start`
+### By installing it
 
-## Use it
+for installation : `npm install -g gettoml` or `yarn global add gettoml`
 
-create a toml file called `example.toml` and [Run it](#run-it).
-this toml file has to be in this format:
+run `gettoml --tomlPath path_to_toml.toml --valuePath path_to_value_in_toml`
+
+if in your shell scripts you need default values if no values were found in the `toml` file you can 
+add `--defaultValue defaultValue`
+
+### Using `npx`
+
+skip the installation part, and add npx before `gettoml` as follows: `npx gettoml ...`
+
+## Examples
+
+if you have a toml file named `example.toml` as below:
 ```toml
-[workerd_config]
 lang = "typescript"
+
+[build]
+command = "yarn build"
 ```
-and then you will have this result :
-```shell
-$ npm start                                                                                                                              worker-api/git/builder-pod !+
-
-> toml-reader@1.0.0 start
-> node index.js
-
-typescript
-```
-
-## New versions
-
-it has to :
-- permit new paths to find all values, and permit another toml file name
-- declare multipaths to get multiple values
-- give all values separated by commas
+you can find :
+- the `lang` using the command `npx gettoml --tomlPath example.toml --valuePath lang`
+- the `build command` using the command `npx gettoml --tomlPath example.toml --valuePath build.command`
+- a hypothetical value named `push` using the command `npx gettoml --tomlPath example.toml --valuePath push --defaultValue "yarn deploy"`
